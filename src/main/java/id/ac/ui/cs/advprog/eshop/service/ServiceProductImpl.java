@@ -1,7 +1,7 @@
 package id.ac.ui.cs.advprog.eshop.service;
 
 import id.ac.ui.cs.advprog.eshop.model.Product;
-import id.ac.ui.cs.advprog.eshop.repository.ProductRepository;
+import id.ac.ui.cs.advprog.eshop.repository.RepoProduct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,10 +10,10 @@ import java.util.List;
 import java.util.Iterator;
 
 @Service
-public class ProductServiceImpl {
+public class ServiceProductImpl implements ServiceProduct {
 
     @Autowired
-    private ProductRepository productRepository;
+    private RepoProduct productRepository;
 
     @Override
     public Product create(Product product) {
