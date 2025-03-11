@@ -59,4 +59,12 @@ public class ServiceProductImpl implements ServiceProduct {
         }
         return existingProduct;
     }
+
+    @Override
+    public void delete(String id) {
+        Product product = productRepository.findById(id);
+        if (product != null) {
+            productRepository.delete(product);
+        }
+    }
 }

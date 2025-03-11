@@ -10,6 +10,7 @@ public interface ServiceProduct {
     public Product edit(EditProduct editProduct);
     public Product findById(String id);
     public Product update(EditProduct editProduct);
+    public void delete(String id);
 
 
 }

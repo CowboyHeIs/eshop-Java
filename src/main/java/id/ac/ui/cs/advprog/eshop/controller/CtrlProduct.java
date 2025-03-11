@@ -55,4 +55,11 @@ public class CtrlProduct {
         return "redirect:/product/list";
     }
 
+    @GetMapping("/delete/{id}")
+    public String delete(@PathVariable String id) {
+        service.delete(id);
+        return "redirect:/product/list";
+    }
+
+
 }

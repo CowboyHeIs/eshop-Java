@@ -29,4 +29,7 @@ public class RepoProduct {
         return null;
     }
 
+    public void delete(Product product) {
+        productData.remove(product);
+    }
 }
