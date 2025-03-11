@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Product</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container my-2">
+  <h2>Edit Product</h2>
+  <form th:action="@{/product/edit/{id}(id=*{productId})}" th:object="${editProduct}" method="post">
+    <input type="hidden" th:field="*{productId}">
+
+    <div class="form-group">
+      <label for="newProductName">Product Name:</label>
+      <input type="text" id="newProductName" th:field="*{newProductName}" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+      <label for="newProductQuantity">Quantity:</label>
+      <input type="number" id="newProductQuantity" th:field="*{newProductQuantity}" class="form-control" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a th:href="@{/product/list}" class="btn btn-secondary">Cancel</a>
+  </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
