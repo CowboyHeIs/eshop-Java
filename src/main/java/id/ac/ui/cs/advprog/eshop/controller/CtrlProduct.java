@@ -13,9 +13,12 @@ import java.util.List;
 @Controller
 @RequestMapping("/product")
 public class CtrlProduct {
+    private final ServiceProduct service;
 
     @Autowired
-    private ServiceProduct service;
+    public CtrlProduct(ServiceProduct service) {
+        this.service = service;
+    }
 
     @GetMapping("/create")
     public String productCreatePage(Model model) {
