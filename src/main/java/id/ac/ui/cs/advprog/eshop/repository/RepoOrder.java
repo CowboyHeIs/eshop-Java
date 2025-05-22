@@ -31,7 +31,7 @@ public class RepoOrder {
         return null;
     }
 
-    public List<Order> findAllByAuthor(String a) {
+    public List<Order> findAllAuthor(String a) {
         List<Order> r = new ArrayList<>();
         for (Order so : orderData) {
             if (so.getAuthor().equals(a)) {
