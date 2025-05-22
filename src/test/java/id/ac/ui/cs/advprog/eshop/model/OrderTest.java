@@ -3,6 +3,8 @@ package id.ac.ui.cs.advprog.eshop.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.skyscreamer.jsonassert.JSONAssert.assertEquals;
+
 public class OrderTest {
 
     private List<Product> products;
