@@ -129,7 +129,7 @@
 - - Violated (Many changes to previous versions because errors after adding Car.java, thus after 
     Module 2)
 - LSP
-- - Used (Car.java and Product.java alone)
+- - Used (Car.java and Product.java alone in CtrlProduct.java)
 - ISP
 - - Unused
 - DIP
@@ -139,3 +139,17 @@
 
 ## Comment :
 - before-solid remains the same as main, branch add seems inefficient
+
+## Reflection :
+1. Technically SRP and LSP, even though instructed.
+2. Let's see :
+- - Advantages :
+- - - Standardize productions.
+- - - LSP helps updates if base design made.
+- - - OCP forces developers (especially game) to rethink base.
+- - Disadvantages :
+- - - OCP often violated if updates or changes occurred (especially if base design changes after 
+      new update (example: Spellsided game uses 1 box during development, after boundaries (or 
+      wall) added the base changes from 1 box to 4))
+3. Disadvantages are on 2nd question (this what I meant OCP hard to use personally)
+
