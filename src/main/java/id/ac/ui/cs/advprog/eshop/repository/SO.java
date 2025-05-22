@@ -12,7 +12,7 @@ import java.util.NoSuchElementException;
 import java.util.List;
 
 @Service
-public class ServiceOrderImpl implements ServiceOrder{
+public class SO implements ServiceOrder{
     @Autowired
     private RepoOrder repoOrder;
 

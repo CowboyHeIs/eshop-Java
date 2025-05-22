@@ -252,3 +252,17 @@ assertValid(validate(6, 1950));
 ## Page 88 :
 - Genuinely, probably none.
 
+## Reflection :
+1. Nope, instead it complicate things (testing helps, but spent more time on thinking name 
+   (especially mind often came up with new names and forgotten past name)). But based on that, 
+   Workflow that fits = Model -> Test -> Service.
+2. probably not. gradlew was corrupted so tests doesn't run, and I've just found out at Exercise.
+
+## MIsunderstandings occured :
+1. "Create OrderStatus enum in src/main/java/enums." misunderstood as "create OrderSatus in Enum 
+   in src/main/java/enums." I've always had a problem like 'which is which' especially when 
+   there's no quotation mark or file type such in this case, 
+2. "Go to OrderService class in src/main/java/repository"? OrderService.java in repository 
+   doesn't exist
+
+
