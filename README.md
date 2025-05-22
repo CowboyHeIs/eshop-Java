@@ -27,7 +27,7 @@
 ### Thoughts after Module 1 :
 - Often confused from different naming style, but ignorable
 - - Example :
-
+- - - 
 | Module            | Mine        |
 |-------------------|-------------|
 |ProductRepository| RepoProduct |
@@ -143,13 +143,112 @@
 ## Reflection :
 1. Technically SRP and LSP, even though instructed.
 2. Let's see :
-- - Advantages :
-- - - Standardize productions.
-- - - LSP helps updates if base design made.
-- - - OCP forces developers (especially game) to rethink base.
-- - Disadvantages :
-- - - OCP often violated if updates or changes occurred (especially if base design changes after 
+- Advantages :
+- - Standardize productions.
+- - LSP helps updates if base design made.
+- - OCP forces developers (especially game) to rethink base.
+- Disadvantages :
+- - OCP often violated if updates or changes occurred (especially if base design changes after 
       new update (example: Spellsided game uses 1 box during development, after boundaries (or 
       wall) added the base changes from 1 box to 4))
 3. Disadvantages are on 2nd question (this what I meant OCP hard to use personally)
+
+
+# Module 4 
+
+# Page 5 :
+1. Depends :
+- Base Case :
+- - Raw Java
+- - No Engine
+- Results :
+-
+  | AI                  | Time | Size  |
+  |---------------------|------|-------|
+  | deepseek-coder-v2   | 1h   | 9gb   |
+  | devstral:24b        | 1.5h | 14gb  |
+  | phind-codellama:34b | 2h   | 24gb  |
+  | ChatGPT4.1mini      | 3h   | 9gb   |
+  | none                | 2d+  | 0gb   |
+
+- Reason : deepseek-coder-v2 and devstral:24b code focused (especially Java), GPT4.1mini often 
+  added unnecessary features and longer debug unlike deepseek-coder-v2. phind-codellama:34b on 
+  par with 
+  deepseek-coder-v2 but more time because more RAM usage, but stronger in Python than Java. and 
+  devstral:24b right between deepseek-coder-v2 and phind-codellama:34b because of size and RAM 
+  usage (quantized by Ollama).
+2. Unknown.
+3. Yes (Current internship)
+4. Depends :
+
+| Feature Size       | Time |
+|--------------------|------|
+| html only          | 30m  |
+| Small easy         | 2h   |
+| Small complicated  | 6h   |
+| medium easy        | 3h   |
+| medium complicated | 8h   |
+| hard easy          | 10h  |
+| hard complicated   | 18h  |
+5. ![Img](img/SpeedTime.png)
+
+## Page 17 :
+```java
+// Valid
+assertValid(1900);
+assertValid(1901);
+assertValid(1950);
+assertValid(1999);
+assertValid(2000);
+
+// Invalid Low
+assertInvalid(1895);
+assertInvalid(1899);
+assertInvalid(1899);
+assertInvalid(1899);
+assertInvalid(1899);
+
+// Invalid High
+assertInvalid(2001);
+assertInvalid(2001);
+assertInvalid(2005);
+assertInvalid(2001);
+assertInvalid(2001);
+```
+
+## Page 18 :
+```java
+///Tests (4n + 1 = 9 total)
+
+// Month boundaries (Year fixed at 1950)
+assertValid(validate(1, 1950));
+
+assertValid(validate(2, 1950));
+
+assertValid(validate(11, 1950));
+
+assertValid(validate(12, 1950));
+
+// Year boundaries (Month fixed at 6)
+assertValid(validate(6, 1900));
+
+assertValid(validate(6, 1901));
+
+assertValid(validate(6, 1999));
+
+assertValid(validate(6, 2000));
+
+// Middle values
+assertValid(validate(6, 1950));
+```
+
+## Page 20 :
+- No, bugs or case logic may untested.
+
+## Page 38 :
+- Self thought :
+- - 'what...'
+
+## Page 88 :
+- Genuinely, probably none.
 
