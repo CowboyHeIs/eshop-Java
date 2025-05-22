@@ -20,7 +20,7 @@ public class Order {
         this.id = id;
         this.orderTime = orderTime;
         this.author = author;
-        this.status = "WAITING_PAYMENT";
+        this.status = OrderStatus.WAITING_PAYMENT.getValue();
 
         if (products.isEmpty()) {
             throw new IllegalArgumentException();
@@ -31,21 +31,14 @@ public class Order {
 
     public Order(String id, List<Product> products, Long orderTime, String author, String status) {
         this.(id, products, orderTime, author);
-
-        String[] statusList = {"WAITING_PAYMENT", "FAILED", "SUCCESS", "CANCELLED"};
-        if (Arrays.stream(statusList).noneMatch((item -> (item.equals(status))))) {
-            throw new IllegalAccessException();
-        } else {
-            this.status = status;
-        }
+        this.setStatus(status);
     }
 
     public void setStatus(String status) {
-        String[] statusList = {"WAITING_PAYMENT", "FAILED", "SUCCESS", "CANCELLED"};
-        if (Arrays.stream(statusList).noneMatch((item -> (item.equals(status))))) {
-            throw new IllegalAccessException();
-        } else {
+        if (OrderStatus.contains(status)){
             this.status = status;
+        } else {
+            throw new IllegalArgumentException();
         }
     }
 }
