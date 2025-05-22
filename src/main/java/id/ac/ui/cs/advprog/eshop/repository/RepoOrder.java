@@ -7,9 +7,37 @@ public class RepoOrder {
 
     private List<Order> orderData = new ArrayList<>();
 
-    public Order save(Order o) {return null;}
+    public Order save(Order o) {
+        int i = 0;
+        for (Order so : OrderData) {
+            if (so.getId().equals(o.getId())) {
+                orderData.remove(i);
+                orderData.add(i, o);
+                return o;
+            }
+            i += 1;
+        }
+        orderData.add(o);
+        return o;
+    }
 
-    public Order findById(String id) {return null;}
+    public Order findById(String id) {
+        for (Order so : orderData) {
+            if (so.getId().equals(id)) {
+                return so;
+            }
+        }
 
-    public List<Order> findAllByAuthor(String a) {return null;}
+        return null;
+    }
+
+    public List<Order> findAllByAuthor(String a) {
+        List<Order> r = new ArrayList<>();
+        for (Order so : orderData) {
+            if (so.getAuthor().equals(a)) {
+                r.add(so);
+            }
+        }
+        return r;
+    }
 }
