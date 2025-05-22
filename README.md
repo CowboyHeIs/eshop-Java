@@ -49,3 +49,21 @@
 - Unnecessary note : Iced coffee, now warm coffee, left untouched due to confusion
 ### 2. #$%@&???
 - uuuhhh... more structured file names... does that suffice? 2 paragraph of confusions enough....
+
+
+#Module 2
+
+##Module Questions :
+- ![Img](img/ProStructQuest.png)
+- - What? Did my gradle went wrong? The Project Structure is different despite following Module
+- ![Img](img/52.4.Quest.png)
+- - Followed Instruction yet not tasks appears
+- ![Img](img/54.Err.png)
+- - What?
+- ![Img](img/ReprtNF.png)
+- - Where????
+
+##Reflections :
+1. None? More questions than asnwers (the 4 questions above are few of many, but I'll ask the 
+   main questions, not the side questions)
+2. No. Many erros. Many questions (Which definition (20-21? 22? 23?)?)
