@@ -19,4 +19,20 @@ public class RepoProduct {
     public Iterator<Product> findAll() {
         return productData.iterator();
     }
+
+    public Product findById(String productId) {
+        return productData.stream()
+                .filter(p -> p.getProductId().equals(productId))
+                .findFirst()
+                .orElse(null);
+    }
+
+    public void update(String productId, Product updatedProduct) {
+        for (int i = 0; i < productData.size(); i++) {
+            if (productData.get(i).getProductId().equals(productId)) {
+                productData.set(i, updatedProduct);
+                return;
+            }
+        }
+    }
 }

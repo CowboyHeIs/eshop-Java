@@ -51,9 +51,9 @@
 - uuuhhh... more structured file names... does that suffice? 2 paragraph of confusions enough....
 
 
-#Module 2
+# Module 2
 
-##Module Questions :
+## Module Questions :
 - ![Img](img/ProStructQuest.png)
 - - What? Did my gradle went wrong? The Project Structure is different despite following Module
 - ![Img](img/52.4.Quest.png)
@@ -63,7 +63,76 @@
 - ![Img](img/ReprtNF.png)
 - - Where????
 
-##Reflections :
+## Reflections :
 1. None? More questions than asnwers (the 4 questions above are few of many, but I'll ask the 
    main questions, not the side questions)
 2. No. Many erros. Many questions (Which definition (20-21? 22? 23?)?)
+
+# Module 3
+
+## Page 3 :
+- OOP = Object focused, Same func diff behaviour.
+
+## Page 6 :
+- Base for Object.
+
+## Page 7 :
+- Entity.
+
+## Page 9 :
+- User focused (ie. Style or output).
+
+## Page 11 :
+- Hide True key in code or main class.
+
+## Page 13 :
+- Extends main class.
+
+## Page 15 :
+- (in biology) same kingdom different species, or same species different race.
+- - Example :
+- - - Bubo bubo sibiricus
+- - - Bubo bubo turcomanus
+
+## Page 18 :
+- Annoyance.
+
+## Page 25 :
+- Annoyance. Complicates structure (not neat if used extremely).
+
+## Page 27 :
+- Complicates updates renders structure not neat.
+
+## Page 31 :
+- ![Img](img/Coffee.png)
+- - Customer wants coffee, not cappuccino (coffee + steamed milk + milk foam), Thus Liskov 
+    Substitution example results incorrectly (by strict coffee (noun) definition).
+- Child can do parent's tasks (but by example, incorrectly).
+
+## Page 38 :
+- Annoyance, Distracts flow if project became larger (medium). ease flow if project become huge 
+  (company size because too many department and sub-department)
+
+## Page 41 :
+- What? 
+
+## Page 43 :
+- Ease future updates.
+
+## Page 48 :
+- Makes sure no problem.
+
+## Page 106 :
+- SRP
+- - Used (RepoProduct.java, ServiceProductImpl.java)
+- OCP
+- - Violated (Many changes to previous versions because errors after adding Car.java, thus after 
+    Module 2)
+- LSP
+- - Used (Car.java and Product.java alone)
+- ISP
+- - Unused
+- DIP
+- - Unused
+- Unfixed reason :
+- - Possibly more errors for Module 4
